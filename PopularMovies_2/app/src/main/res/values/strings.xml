@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="empty_state">No Movies Found</string>
+    <string name="settings_menu_item">Settings</string>
+    <string name="settings_title">Popular Movies Settings</string>
+    <string name="details_title">Movie Details</string>
+
+    <string name="title_label">Title</string>
+    <string name="rating_label">Average Rating: </string>
+    <string name="release_date_label">Released in:</string>
+    <string name="synopsis_label">Synopsis</string>
+
+
+    <!-- Strings For Order-By Preference-->
+    <string name="settings_order_by_label">Sort By</string>
+    <string name="settings_order_by_key" translatable="false">order_by</string>
+    <string name="settings_order_by_default" translatable="false">@string/settings_order_by_popularity_value</string>
+
+    <!-- Label for order-by popularity option-->
+    <string name="settings_order_by_popularity_label">Most Popular</string>
+    <string name="settings_order_by_popularity_value" translatable="false">popularity.desc</string>
+
+    <!-- Label for order-by rating option -->
+    <string name="settings_order_by_rating_label">Highest Rated</string>
+    <string name="settings_order_by_rating_value" translatable="false">voteAverage.desc</string>
+    <string name="settings_order_by_favorites_label">Favorites</string>
+    <string name="settings_order_by_favorites_value" translatable="false">favorites</string>
+    <string name="no_title">Title not found</string>
+    <string name="no_info">Date not found</string>
+    <string name="no_rating">Rating not found</string>
+    <string name="no_reviews">There are no reviews for this movie</string>
+    <string name="author">Author: </string>
+    <string name="user_reviews">User Reviews</string>
+    <string name="trailers_label">Trailers</string>
+    <string name="no_trailers">No available trailers</string>
+    <string name="favorite_label">Favorite Movie: </string>
+    <string name="add_favorite_movie_successful">Movie added to favorites</string>
+    <string name="add_favorite_movie_failed">Error adding movie to favorites</string>
+    <string name="remove_favorite_movie_successful">Movie removed from favorites</string>
+    <string name="remove_favorite_movie_failed">Error removing movie from favorites</string>
+</resources>
