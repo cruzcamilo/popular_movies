@@ -1,12 +1,11 @@
 package com.example.android.popularmovies;
 
-import android.content.AsyncTaskLoader;
 import android.content.Context;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DetailLoader extends AsyncTaskLoader<List<Review>> {
+public class DetailLoader extends android.support.v4.content.AsyncTaskLoader<List<Review>> {
 
     /** Query URL */
     private String mUrl;

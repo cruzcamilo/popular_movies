@@ -88,6 +88,10 @@ public class TrailerAdapter extends RecyclerView.Adapter<TrailerAdapter.TrailerV
         }
     }
 
+
+
+
+
     public void clear() {
         if (!trailers.equals(null)) {
             int size = getItemCount();

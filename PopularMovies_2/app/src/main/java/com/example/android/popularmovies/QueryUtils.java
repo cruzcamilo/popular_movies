@@ -18,7 +18,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.android.popularmovies.MainActivity.LOG_TAG;
+import static com.example.android.popularmovies.MainFragment.LOG_TAG;
 
 
 public final class QueryUtils {
