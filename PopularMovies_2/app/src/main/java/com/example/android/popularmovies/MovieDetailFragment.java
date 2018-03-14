@@ -39,6 +39,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.CompoundButton;
+import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -79,6 +80,7 @@ public class MovieDetailFragment extends Fragment implements
     private Uri pictureUri;
     private String movieId, coverImageUri, posterImageUri;
     private List<Movie> imagesUrl;
+
     private Movie myMovie;
 
 
@@ -145,7 +147,6 @@ public class MovieDetailFragment extends Fragment implements
         mBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_movie_detail, container, false);
 
-
         View rootView = mBinding.getRoot();
 
         if (!isOnline()) {
@@ -194,8 +195,10 @@ public class MovieDetailFragment extends Fragment implements
             mBinding.fragmentMovieLayout.setVisibility(View.VISIBLE);
         }
 
+        //Enable HomeAsUpEnable only if we're not on a tablet.
+        GridView movieGrid = (GridView) getActivity().findViewById(R.id.gridView);
         ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
-        if (actionBar != null) {
+        if (actionBar != null && movieGrid == null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
@@ -286,6 +289,7 @@ public class MovieDetailFragment extends Fragment implements
                 mBinding.trailerInclude.rvTrailers.setVisibility(View.GONE);
                 mBinding.reviewLayout.reviewsLabel.setVisibility(View.GONE);
                 mBinding.reviewLayout.rvReviews.setVisibility(View.GONE);
+                mBinding.emptyDetails.setVisibility(View.GONE);
                 mBinding.fragmentMovieLayout.setVisibility(View.VISIBLE);
             }
         }
