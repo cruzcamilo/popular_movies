@@ -23,7 +23,7 @@
                 android:id="@+id/fragment_movie_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp"
+
                 tools:context="com.example.android.popularmovies.MovieDetailFragment">
 
                 <ImageView
@@ -60,16 +60,12 @@
 
                 <ImageView
                     android:id="@+id/star_image"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
                     app:layout_constraintBottom_toTopOf="@+id/rating_label"
                     app:layout_constraintLeft_toRightOf="@+id/rating_label"
                     app:layout_constraintTop_toBottomOf="@+id/rating_label"
                     app:layout_constraintVertical_bias="0.55"
-                    app:srcCompat="@drawable/star_on" />
+                    app:srcCompat="@drawable/star_on"
+                    style="@style/star_attributes" />
 
                 <TextView
                     android:id="@+id/rating_label"
@@ -102,7 +98,6 @@
                 <TextView
                     android:id="@+id/release_date_info"
                     style="@style/content"
-                    android:layout_marginLeft="9dp"
                     android:layout_marginStart="8dp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     app:layout_constraintBaseline_toBaselineOf="@+id/release_date_label"
@@ -125,12 +120,13 @@
                 <TextView
                     android:id="@+id/synopsis_info"
                     style="@style/content"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    android:padding="8dp"
+                    app:layout_constraintHorizontal_bias="0.49"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/poster_detail"
-                    tools:text="During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok." />
+                    tools:text="During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok."
+                     />
 
                 <include
                     android:id="@+id/trailer_include"
@@ -151,7 +147,6 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/trailer_include" />
-
             </android.support.constraint.ConstraintLayout>
         </ScrollView>
     </RelativeLayout>

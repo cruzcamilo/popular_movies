@@ -76,7 +76,7 @@ public class MainFragment extends Fragment implements
             FavoriteMoviesLoader favoriteMoviesLoader = new FavoriteMoviesLoader();
             favoriteMoviesLoader.useFavoriteLoadManager();
         } else {
-            if (savedInstanceState != null) {
+            if(savedMovies != null && !savedMovies.isEmpty()) {
                 circle.setVisibility(View.GONE);
                 savedMovies = savedInstanceState.getParcelableArrayList("MOVIE_LIST");
                 if (savedMovies != null) {
@@ -102,12 +102,13 @@ public class MainFragment extends Fragment implements
             }
         }
 
+
+
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 mTablet = ((MainActivity) getActivity()).isTablet();
                 Intent detailActivity = new Intent(getActivity(), MovieDetailActivity.class);
-
 
                 if (!favoriteView) {
                     Movie selectedMovie = mAdapter.getItem(position);
@@ -176,10 +177,9 @@ public class MainFragment extends Fragment implements
 
         Uri baseUri = Uri.parse(BASE_QUERY_URL);
         Uri.Builder uriBuilder = baseUri.buildUpon();
-        uriBuilder.appendPath("discover");
         uriBuilder.appendPath("movie");
+        uriBuilder.appendPath(sortBy);
         uriBuilder.appendQueryParameter("api_key", API_KEY);
-        uriBuilder.appendQueryParameter("sort_by", sortBy);
         uriBuilder.appendQueryParameter("page", "1");
         Log.d(LOG_TAG + "URL", uriBuilder.toString());
 

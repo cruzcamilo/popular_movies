@@ -23,7 +23,23 @@ import static com.example.android.popularmovies.MainFragment.LOG_TAG;
 
 public final class QueryUtils {
 
+    private static final String KEY_TITLE = "title";
+    private static final String KEY_POSTER_PATH = "poster_path";
+    private static final String KEY_ID = "id";
+    private static final String KEY_OVERVIEW = "overview";
+    private static final String KEY_VOTE_AVERAGE = "vote_average";
+    private static final String KEY_RELEASE_DATE = "release_date";
+    private static final String BASE_IMAGE_URL_500 = "https://image.tmdb.org/t/p/w500";
+    private static final String NO_POSTER = "no_poster";
+    private static final String KEY_RESULTS = "results";
     private static final String BASE_IMAGE_URL = "https://image.tmdb.org/t/p/w780";
+    private static final String KEY_AUTHOR = "author";
+    private static final String KEY_CONTENT = "content";
+    private static final String RETRIEVING_ERROR_MESSAGE = "Problem retrieving the movie JSON results.";
+    private static final String PARSING_ERROR_MESSAGE = "Problem parsing the movie JSON results";
+    private static final String QUERY_UTILS_TAG = "QueryUtils";
+
+
     public static List<Movie> fetchMovieData(String requestUrl) {
         String jsonResponse = getJson(requestUrl);
         List<Movie> movies = extractMovies(jsonResponse);
@@ -96,7 +112,7 @@ public final class QueryUtils {
                 Log.e(LOG_TAG, "Error response code: " + urlConnection.getResponseCode());
             }
         } catch (IOException e) {
-            Log.e(LOG_TAG, "Problem retrieving the book JSON results.", e);
+            Log.e(LOG_TAG, RETRIEVING_ERROR_MESSAGE, e);
         } finally {
             if (urlConnection != null) {
                 urlConnection.disconnect();
@@ -128,28 +144,28 @@ public final class QueryUtils {
         try {
 
             JSONObject listMoviesJSON = new JSONObject(publicationJSON);
-            JSONArray results = listMoviesJSON.getJSONArray("results");
+            JSONArray results = listMoviesJSON.getJSONArray(KEY_RESULTS);
 
             for (int i = 0; i < results.length(); i++) {
                 JSONObject movie = results.getJSONObject(i);
 
-                String title = movie.getString("title");
-                String thumbnail = movie.getString("poster_path");
-                String id = movie.getString("id");
-                String overview = movie.getString("overview");
-                Double voteAverage = movie.getDouble("vote_average");
-                String releaseDate = movie.getString("release_date");
+                String title = movie.getString(KEY_TITLE);
+                String thumbnail = movie.getString(KEY_POSTER_PATH);
+                String id = movie.getString(KEY_ID);
+                String overview = movie.getString(KEY_OVERVIEW);
+                Double voteAverage = movie.getDouble(KEY_VOTE_AVERAGE);
+                String releaseDate = movie.getString(KEY_RELEASE_DATE);
 
                 if(!thumbnail.equals("null")){
-                    thumbnail = BASE_IMAGE_URL + thumbnail;
+                    String baseImageUrl = BASE_IMAGE_URL_500;
+                    thumbnail = baseImageUrl + thumbnail;
                 } else {
-                    thumbnail = "no_poster";
+                    thumbnail = NO_POSTER;
                 }
                 movies.add(new Movie(title, thumbnail, overview, voteAverage, releaseDate, id));
             }
-
         } catch (JSONException e) {
-            Log.e("QueryUtils", "Problem parsing the movie JSON results", e);
+            Log.e(QUERY_UTILS_TAG, PARSING_ERROR_MESSAGE, e);
         }
         return movies;
     }
@@ -159,19 +175,18 @@ public final class QueryUtils {
 
         try {
             JSONObject listMoviesJSON = new JSONObject(publicationJSON);
-            JSONArray results = listMoviesJSON.getJSONArray("results");
+            JSONArray results = listMoviesJSON.getJSONArray(KEY_RESULTS);
 
             for (int i = 0; i < results.length(); i++) {
                 JSONObject review = results.getJSONObject(i);
 
-                String author = review.getString("author");
-                String content = review.getString("content");
-
+                String author = review.getString(KEY_AUTHOR);
+                String content = review.getString(KEY_CONTENT);
                 reviews.add(new Review(author, content));
             }
 
         } catch (JSONException e) {
-            Log.e("QueryUtils", "Problem parsing the movie JSON results", e);
+            Log.e(QUERY_UTILS_TAG, PARSING_ERROR_MESSAGE, e);
         }
         return reviews;
     }
@@ -181,7 +196,7 @@ public final class QueryUtils {
 
         try {
             JSONObject listMoviesJSON = new JSONObject(publicationJSON);
-            JSONArray results = listMoviesJSON.getJSONArray("results");
+            JSONArray results = listMoviesJSON.getJSONArray(KEY_RESULTS);
 
             for (int i = 0; i < results.length(); i++) {
                 JSONObject review = results.getJSONObject(i);
@@ -207,7 +222,7 @@ public final class QueryUtils {
             }
 
         } catch (JSONException e) {
-            Log.e("QueryUtils", "Problem parsing the movie JSON results", e);
+            Log.e(QUERY_UTILS_TAG, PARSING_ERROR_MESSAGE, e);
         }
         return trailers;
     }
@@ -233,7 +248,7 @@ public final class QueryUtils {
             }
 
         } catch (JSONException e) {
-            Log.e("QueryUtils", "Problem parsing the movie JSON results", e);
+            Log.e(QUERY_UTILS_TAG, PARSING_ERROR_MESSAGE, e);
         }
         Log.v("Images check 1", images.toString());
         return images;

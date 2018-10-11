@@ -526,7 +526,7 @@ public class MovieDetailFragment extends Fragment implements
             mBinding.ratingInfo.setText(getString(R.string.no_rating));
         }
 
-        if (!myMovie.getVoteAverage().equals("")) {
+        if (!myMovie.getOverview().equals("")) {
             mBinding.synopsisInfo.setText(myMovie.getOverview());
         }
 
