@@ -3,6 +3,8 @@ package com.example.android.popularmovies;
 import android.net.Uri;
 import android.util.Log;
 
+import com.example.android.popularmovies.database.Movie;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -18,7 +20,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.android.popularmovies.MainFragment.LOG_TAG;
+import static com.example.android.popularmovies.UI.MainFragment.LOG_TAG;
 
 
 public final class QueryUtils {
@@ -151,14 +153,13 @@ public final class QueryUtils {
 
                 String title = movie.getString(KEY_TITLE);
                 String thumbnail = movie.getString(KEY_POSTER_PATH);
-                String id = movie.getString(KEY_ID);
+                Integer id = movie.getInt(KEY_ID);
                 String overview = movie.getString(KEY_OVERVIEW);
                 Double voteAverage = movie.getDouble(KEY_VOTE_AVERAGE);
                 String releaseDate = movie.getString(KEY_RELEASE_DATE);
 
                 if(!thumbnail.equals("null")){
-                    String baseImageUrl = BASE_IMAGE_URL_500;
-                    thumbnail = baseImageUrl + thumbnail;
+                    thumbnail = BASE_IMAGE_URL_500 + thumbnail;
                 } else {
                     thumbnail = NO_POSTER;
                 }
@@ -250,7 +251,6 @@ public final class QueryUtils {
         } catch (JSONException e) {
             Log.e(QUERY_UTILS_TAG, PARSING_ERROR_MESSAGE, e);
         }
-        Log.v("Images check 1", images.toString());
         return images;
     }
 }

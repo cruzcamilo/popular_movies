@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.AsyncTaskLoader;
 import android.util.Log;
 
+import com.example.android.popularmovies.database.Movie;
+
 import java.util.List;
 
 public class MovieLoader extends AsyncTaskLoader<List<Movie>> {

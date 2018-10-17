@@ -1,10 +1,13 @@
-package com.example.android.popularmovies;
+package com.example.android.popularmovies.UI;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+
+import com.example.android.popularmovies.R;
+import com.example.android.popularmovies.SettingsActivity;
+import com.example.android.popularmovies.database.Movie;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -16,9 +19,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         if(findViewById(R.id.container)!= null){
             mTabletMode = true;
-            MovieDetailFragment detailFragment = new MovieDetailFragment();
+            DetailFragment detailFragment = new DetailFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.container, detailFragment).commit();
         }
+
     }
 
     public boolean isTablet() {
@@ -34,21 +38,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(settingsIntent);
                 return true;
             }
+
         return super.onOptionsItemSelected(item);
     }
 
     public void replaceFragment(Movie movie) {
-        MovieDetailFragment detailFragment = new MovieDetailFragment();
+        DetailFragment detailFragment = new DetailFragment();
         Bundle args = new Bundle();
         args.putParcelable("Movie", movie);
         detailFragment.setArguments(args);
         getSupportFragmentManager().beginTransaction().replace(R.id.container, detailFragment).commit();
     }
 
-    public void replaceFavoriteMovieFragment(Uri movieUri) {
-        MovieDetailFragment detailFragment = new MovieDetailFragment();
+    public void replaceFavoriteMovieFragment(int movieId) {
+        DetailFragment detailFragment = new DetailFragment();
         Bundle args = new Bundle();
-        args.putParcelable("FavoriteMovie", movieUri);
+        args.putInt("FavoriteMovieId", movieId);
         detailFragment.setArguments(args);
         getSupportFragmentManager().beginTransaction().replace(R.id.container, detailFragment).commit();
     }

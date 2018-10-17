@@ -15,7 +15,7 @@
         android:roundIcon="@drawable/popcorn"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".UI.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -24,24 +24,20 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/settings_title"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".UI.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".UI.MainActivity" />
         </activity>
         <activity
-            android:name=".MovieDetailActivity"
+            android:name=".UI.DetailActivity"
             android:label="@string/details_title"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".UI.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".UI.MainActivity" />
         </activity>
-        <provider
-            android:name=".data.MovieProvider"
-            android:authorities="com.example.android.popularmovies"
-            android:exported="false">
-        </provider>
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.example.android.mypopularmovies"

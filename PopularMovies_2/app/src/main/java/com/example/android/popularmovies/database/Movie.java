@@ -1,37 +1,58 @@
-package com.example.android.popularmovies;
+package com.example.android.popularmovies.database;
 
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
+import android.arch.persistence.room.PrimaryKey;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+@Entity(tableName = "movie")
 public class Movie implements Parcelable {
 
+    @PrimaryKey
+    private Integer id;
     private String title;
     private String posterThumbnail;
     private String overview;
     private Double voteAverage;
     private String releaseDate;
-    private String ID;
+    private String coverImageUri, posterImageUri;
+    @Ignore
     private String trailerURL;
+    @Ignore
     private String trailerThumbnail;
-    private String imageURL;
+    @Ignore
+    private String coverImageURL;
 
+    @Ignore
     public Movie(String title, String posterThumbnail, String overview, Double voteAverage,
-                 String releaseDate, String ID) {
+                 String releaseDate, Integer id) {
         this.title = title;
         this.posterThumbnail = posterThumbnail;
         this.overview = overview;
         this.voteAverage = voteAverage;
         this.releaseDate = releaseDate;
-        this.ID = ID;
+        this.id = id;
     }
 
+    public Movie(Integer id, String title, String overview, Double voteAverage, String releaseDate, String coverImageUri, String posterImageUri) {
+        this.id = id;
+        this.title = title;
+        this.overview = overview;
+        this.voteAverage = voteAverage;
+        this.releaseDate = releaseDate;
+        this.coverImageUri = coverImageUri;
+        this.posterImageUri = posterImageUri;
+    }
+
+    @Ignore
     public Movie(String trailerURL, String trailerThumbnail) {
         this.trailerURL = trailerURL;
         this.trailerThumbnail = trailerThumbnail;
     }
 
-    public Movie(String imageURL) {
-        this.imageURL = imageURL;
+    public Movie(String coverImageURL) {
+        this.coverImageURL = coverImageURL;
     }
 
     public String getTitle() {
@@ -54,8 +75,8 @@ public class Movie implements Parcelable {
         return releaseDate;
     }
 
-    public String getID() {
-        return ID;
+    public Integer getId() {
+        return id;
     }
 
     public String getTrailerURL() {
@@ -66,14 +87,36 @@ public class Movie implements Parcelable {
         return trailerThumbnail;
     }
 
-    public String getImageURL() {
-        return imageURL;
+    public String getCoverImageURL() {
+        return coverImageURL;
+    }
+
+    public String getCoverImageUri() {
+        return coverImageUri;
+    }
+
+    public String getPosterImageUri() {
+        return posterImageUri;
+    }
+
+    public void setPosterThumbnail(String posterThumbnail) {
+        this.posterThumbnail = posterThumbnail;
     }
 
     @Override
     public String toString() {
         return "Movie{" +
-                "imageURL='" + imageURL + '\'' +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", posterThumbnail='" + posterThumbnail + '\'' +
+                ", overview='" + overview + '\'' +
+                ", voteAverage=" + voteAverage +
+                ", releaseDate='" + releaseDate + '\'' +
+                ", coverImageUri='" + coverImageUri + '\'' +
+                ", posterImageUri='" + posterImageUri + '\'' +
+                ", trailerURL='" + trailerURL + '\'' +
+                ", trailerThumbnail='" + trailerThumbnail + '\'' +
+                ", coverImageURL='" + coverImageURL + '\'' +
                 '}';
     }
 
@@ -89,7 +132,7 @@ public class Movie implements Parcelable {
         dest.writeString(overview);
         dest.writeDouble(voteAverage);
         dest.writeString(releaseDate);
-        dest.writeString(ID);
+        dest.writeInt(id);
     }
 
     public Movie(Parcel parcel){
@@ -98,7 +141,7 @@ public class Movie implements Parcelable {
         overview = parcel.readString();
         voteAverage = parcel.readDouble();
         releaseDate = parcel.readString();
-        ID = parcel.readString();
+        id = parcel.readInt();
     }
 
     public static final Parcelable.Creator<Movie> CREATOR = new Parcelable.Creator<Movie>() {

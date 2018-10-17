@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">PopularMovies</string>
     <string name="no_internet">No Internet Connection</string>
     <string name="empty_state">No Movies Found</string>
@@ -36,10 +36,11 @@
     <string name="trailers_label">Trailers</string>
     <string name="no_trailers">No available trailers</string>
     <string name="favorite_label">Favorite Movie: </string>
-    <string name="adding_favorite_movie">Adding to favorites \n Saving images...</string>
+    <string name="adding_favorite_movie" tools:ignore="TypographyEllipsis">Adding to favorites \n Saving images...</string>
     <string name="add_favorite_movie_successful">Movie added to favorites</string>
     <string name="add_favorite_movie_failed">Error adding movie to favorites</string>
-    <string name="remove_favorite_movie">Removing from favorites \n Deleting saved images...</string>
+    <string name="remove_favorite_movie" tools:ignore="TypographyEllipsis">Removing from favorites \n Deleting saved images...</string>
     <string name="remove_favorite_movie_successful">Movie removed from favorites</string>
     <string name="remove_favorite_movie_failed">Error removing movie from favorites</string>
+    <string name="empty_favorite_movies">You haven\'t added your favorite movies</string>
 </resources>

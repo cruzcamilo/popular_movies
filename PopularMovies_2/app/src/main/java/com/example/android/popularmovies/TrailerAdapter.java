@@ -2,12 +2,12 @@ package com.example.android.popularmovies;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.android.popularmovies.database.Movie;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -57,7 +57,6 @@ public class TrailerAdapter extends RecyclerView.Adapter<TrailerAdapter.TrailerV
     @Override
     public void onBindViewHolder(TrailerViewHolder holder, int position) {
         Movie trailer = trailers.get(position);
-        Log.v("Objeto", trailer.getTrailerThumbnail());
 
         if(!trailer.getTrailerThumbnail().equals("null")){
             Picasso.with(context)
@@ -78,7 +77,6 @@ public class TrailerAdapter extends RecyclerView.Adapter<TrailerAdapter.TrailerV
         return trailers.get(position);
     }
 
-
     public void setData(List<Movie> data) {
 
         if (null != data && !data.isEmpty()) {
@@ -87,10 +85,6 @@ public class TrailerAdapter extends RecyclerView.Adapter<TrailerAdapter.TrailerV
             notifyDataSetChanged();
         }
     }
-
-
-
-
 
     public void clear() {
         if (!trailers.equals(null)) {
