@@ -1,4 +1,4 @@
-package com.example.android.popularmovies.database;
+package com.example.android.popularmovies.model;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;

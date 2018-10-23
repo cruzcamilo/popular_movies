@@ -1,4 +1,4 @@
-package com.example.android.popularmovies.UI;
+package com.example.android.popularmovies.ui;
 
 import android.Manifest;
 import android.app.DownloadManager;
@@ -41,21 +41,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.CompoundButton;
-import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.android.popularmovies.AppExecutors;
-import com.example.android.popularmovies.DetailLoader;
-import com.example.android.popularmovies.view_models.FavoriteMovieViewModel;
-import com.example.android.popularmovies.view_models.FavoriteMovieViewModelFactory;
+import com.example.android.popularmovies.utils.AppExecutors;
+import com.example.android.popularmovies.loader.DetailLoader;
 import com.example.android.popularmovies.R;
-import com.example.android.popularmovies.Review;
-import com.example.android.popularmovies.ReviewAdapter;
-import com.example.android.popularmovies.TrailerAdapter;
+import com.example.android.popularmovies.model.Review;
+import com.example.android.popularmovies.adapter.ReviewAdapter;
+import com.example.android.popularmovies.adapter.TrailerAdapter;
 import com.example.android.popularmovies.database.AppDatabase;
-import com.example.android.popularmovies.database.Movie;
+import com.example.android.popularmovies.model.Movie;
 import com.example.android.popularmovies.databinding.FragmentMovieDetailBinding;
+import com.example.android.popularmovies.viewmodels.DetailMovieViewModel;
+import com.example.android.popularmovies.viewmodels.DetailMovieViewModelFactory;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -67,9 +66,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static com.example.android.popularmovies.UI.MainFragment.API_KEY;
-import static com.example.android.popularmovies.UI.MainFragment.BASE_QUERY_URL;
-import static com.example.android.popularmovies.UI.MainFragment.LOG_TAG;
+import static com.example.android.popularmovies.ui.MainFragment.API_KEY;
+import static com.example.android.popularmovies.ui.MainFragment.BASE_QUERY_URL;
+import static com.example.android.popularmovies.ui.MainFragment.LOG_TAG;
 
 public class DetailFragment extends Fragment implements
         android.support.v4.app.LoaderManager.LoaderCallbacks<List<Review>>,
@@ -126,23 +125,6 @@ public class DetailFragment extends Fragment implements
         }
 
         requestPermissions();
-    }
-
-    private void setupDetailViewModel() {
-        isSortedByFavoriteMovie = true;
-
-        FavoriteMovieViewModelFactory favoriteMovieViewModelFactory =
-                new FavoriteMovieViewModelFactory(mDb, movieId);
-        final FavoriteMovieViewModel favoriteMovieViewModel =
-                ViewModelProviders.of(this, favoriteMovieViewModelFactory).get(FavoriteMovieViewModel.class);
-        favoriteMovieViewModel.getMovie().observe(this, new Observer<Movie>() {
-            @Override
-            public void onChanged(@Nullable Movie movie) {
-                favoriteMovieViewModel.getMovie().removeObserver(this);
-                myMovie = movie;
-                populateUI(movie);
-            }
-        });
     }
 
     public void requestPermissions() {
@@ -222,16 +204,14 @@ public class DetailFragment extends Fragment implements
             loaderManager.initLoader(TRAILER_LOADER_ID, null, this);
             loaderManager.initLoader(REVIEW_LOADER_ID, null, this);
             loaderManager.initLoader(IMAGE_LOADER_ID, null, this);
-
-            //isFavoriteMovieCheck(movieId);
             mBinding.emptyDetails.setVisibility(View.GONE);
             mBinding.fragmentMovieLayout.setVisibility(View.VISIBLE);
         }
 
         //Enable HomeAsUpEnable only if we're not on a tablet.
-        GridView movieGrid = (GridView) getActivity().findViewById(R.id.gridView);
+        RecyclerView movieRecycler = (RecyclerView) getActivity().findViewById(R.id.rv_movies);
         ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
-        if (actionBar != null && movieGrid == null) {
+        if (actionBar != null && movieRecycler == null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
@@ -623,5 +603,22 @@ public class DetailFragment extends Fragment implements
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(SAVED_ID_KEY, movieId);
+    }
+
+    private void setupDetailViewModel() {
+        isSortedByFavoriteMovie = true;
+
+        DetailMovieViewModelFactory detailMovieViewModelFactory =
+                new DetailMovieViewModelFactory(mDb, movieId);
+        final DetailMovieViewModel detailMovieViewModel =
+                ViewModelProviders.of(this, detailMovieViewModelFactory).get(DetailMovieViewModel.class);
+        detailMovieViewModel.getMovie().observe(this, new Observer<Movie>() {
+            @Override
+            public void onChanged(@Nullable Movie movie) {
+                detailMovieViewModel.getMovie().removeObserver(this);
+                myMovie = movie;
+                populateUI(movie);
+            }
+        });
     }
 }

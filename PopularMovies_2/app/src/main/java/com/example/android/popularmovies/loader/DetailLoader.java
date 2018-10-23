@@ -1,6 +1,9 @@
-package com.example.android.popularmovies;
+package com.example.android.popularmovies.loader;
 
 import android.content.Context;
+
+import com.example.android.popularmovies.utils.QueryUtils;
+import com.example.android.popularmovies.model.Review;
 
 import java.util.ArrayList;
 import java.util.List;

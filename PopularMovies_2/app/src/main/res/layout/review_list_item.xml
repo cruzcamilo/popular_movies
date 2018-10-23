@@ -18,7 +18,6 @@
         <TextView
             android:id="@+id/comment_author"
             style="@style/content"
-            android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
             tools:text="John" />
     </LinearLayout>

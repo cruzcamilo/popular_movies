@@ -23,8 +23,7 @@
                 android:id="@+id/fragment_movie_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
-                tools:context="com.example.android.popularmovies.UI.DetailFragment">
+                tools:context="com.example.android.popularmovies.ui.DetailFragment">
 
                 <ImageView
                     android:id="@+id/movie_detail_image"
@@ -52,7 +51,7 @@
                     android:id="@+id/poster_detail"
                     android:layout_width="143dp"
                     android:layout_height="198dp"
-                    android:layout_marginLeft="0dp"
+
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="8dp"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -70,7 +69,7 @@
                 <TextView
                     android:id="@+id/rating_label"
                     style="@style/label"
-                    android:layout_marginLeft="8dp"
+
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:text="@string/rating_label"

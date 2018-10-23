@@ -1,11 +1,11 @@
-package com.example.android.popularmovies.UI;
+package com.example.android.popularmovies.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.android.popularmovies.R;
-import com.example.android.popularmovies.database.Movie;
+import com.example.android.popularmovies.model.Movie;
 
 public class DetailActivity extends AppCompatActivity {
 

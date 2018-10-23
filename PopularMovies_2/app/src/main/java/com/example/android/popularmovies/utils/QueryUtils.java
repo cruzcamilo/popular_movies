@@ -1,9 +1,10 @@
-package com.example.android.popularmovies;
+package com.example.android.popularmovies.utils;
 
 import android.net.Uri;
 import android.util.Log;
 
-import com.example.android.popularmovies.database.Movie;
+import com.example.android.popularmovies.model.Review;
+import com.example.android.popularmovies.model.Movie;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -20,7 +21,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.android.popularmovies.UI.MainFragment.LOG_TAG;
+import static com.example.android.popularmovies.ui.MainFragment.LOG_TAG;
 
 
 public final class QueryUtils {

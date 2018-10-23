@@ -1,4 +1,4 @@
-package com.example.android.popularmovies.UI;
+package com.example.android.popularmovies.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.example.android.popularmovies.R;
-import com.example.android.popularmovies.SettingsActivity;
-import com.example.android.popularmovies.database.Movie;
+import com.example.android.popularmovies.settings.SettingsActivity;
+import com.example.android.popularmovies.model.Movie;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
             DetailFragment detailFragment = new DetailFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.container, detailFragment).commit();
         }
+
 
     }
 

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <fragment android:name="com.example.android.popularmovies.UI.MainFragment"
+    <fragment android:name="com.example.android.popularmovies.ui.MainFragment"
         android:id="@+id/main_activity_fragment"
         android:layout_weight="3"
         android:layout_width="0dp"
