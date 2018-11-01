@@ -9,7 +9,7 @@ import com.example.android.popularmovies.model.Movie;
 
 public class DetailActivity extends AppCompatActivity {
 
-    DetailFragment detailFragment = new DetailFragment();;
+    DetailFragment detailFragment = new DetailFragment();
 
 
     @Override
@@ -17,19 +17,19 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_details);
 
-        if(savedInstanceState != null){
+        if (savedInstanceState != null) {
             detailFragment = (DetailFragment) getSupportFragmentManager().getFragment(savedInstanceState, "detailSavedFragment");
             getSupportFragmentManager().beginTransaction().replace(R.id.container, detailFragment).commit();
         }
 
-            if (getIntent() != null) {
-                Intent movieIntent = getIntent();
-                Movie movie = movieIntent.getParcelableExtra("Movie");
-                Bundle bundle = new Bundle();
-                bundle.putParcelable("Movie", movie);
-                detailFragment.setArguments(bundle);
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, detailFragment).commit();
-            }
+        if (getIntent() != null) {
+            Intent movieIntent = getIntent();
+            Movie movie = movieIntent.getParcelableExtra("Movie");
+            Bundle bundle = new Bundle();
+            bundle.putParcelable("Movie", movie);
+            detailFragment.setArguments(bundle);
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, detailFragment).commit();
+        }
     }
 
     //Taken from https://stackoverflow.com/questions/15313598

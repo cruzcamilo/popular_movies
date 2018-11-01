@@ -102,7 +102,6 @@ public class MainFragment extends Fragment implements
                 circle.setVisibility(View.GONE);
                 savedMovies = savedInstanceState.getParcelableArrayList(MOVIE_LIST_KEY);
                 if (savedMovies != null) {
-
                     mAdapter.setData(savedMovies);
                 }
             } else {

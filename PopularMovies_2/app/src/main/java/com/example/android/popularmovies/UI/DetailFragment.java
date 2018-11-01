@@ -94,6 +94,7 @@ public class DetailFragment extends Fragment implements
     private Movie myMovie;
     private AppDatabase mDb;
     private Boolean isSortedByFavoriteMovie = false;
+    private Movie movieOnDb;
 
     public DetailFragment() {
     }
@@ -206,6 +207,7 @@ public class DetailFragment extends Fragment implements
             loaderManager.initLoader(IMAGE_LOADER_ID, null, this);
             mBinding.emptyDetails.setVisibility(View.GONE);
             mBinding.fragmentMovieLayout.setVisibility(View.VISIBLE);
+            isFavoriteMovieCheck(myMovie.getId());
         }
 
         //Enable HomeAsUpEnable only if we're not on a tablet.
@@ -219,7 +221,7 @@ public class DetailFragment extends Fragment implements
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 if (isChecked) {
-                    if (myMovie != null && myMovie.getPosterImageUri() == null) {
+                    if (myMovie.getPosterImageUri() == null && movieOnDb==null) {
                         saveFavoriteMovie();
                     }
                 } else {
@@ -227,7 +229,26 @@ public class DetailFragment extends Fragment implements
                 }
             }
         });
+
         return rootView;
+    }
+
+    private void isFavoriteMovieCheck (final int movieId) {
+        DetailMovieViewModelFactory detailMovieViewModelFactory =
+                new DetailMovieViewModelFactory(mDb, movieId);
+        final DetailMovieViewModel detailMovieViewModel =
+                ViewModelProviders.of(this, detailMovieViewModelFactory).get(DetailMovieViewModel.class);
+
+        detailMovieViewModel.getMovie().observe(this, new Observer<Movie>() {
+            @Override
+            public void onChanged(@Nullable Movie movie) {
+              detailMovieViewModel.getMovie().removeObserver(this);
+                movieOnDb = movie;
+                if(movie != null){
+                    mBinding.favoriteBtn.setChecked(true);
+                }
+            }
+        });
     }
 
     public boolean isOnline() {
@@ -308,6 +329,9 @@ public class DetailFragment extends Fragment implements
     }
 
     private void removeFavoriteMovie() {
+        if (movieOnDb != null){
+            myMovie = movieOnDb;
+        }
         ContentResolver contentResolver = getActivity().getContentResolver();
         coverImageUri = myMovie.getCoverImageUri();
         posterImageUri = myMovie.getPosterImageUri();
