@@ -1,16 +1,16 @@
 # Popular Movies
 
-Descubre peliculas populares o con alta calificación y crea tu propia lista de lista de peliculas favoritas.
+Discover movies sorted by most popular or highest rated and create your own library of favorite movies.
 
-# Características:
+# Features:
 
-- Conoce información de la pelicula como año de lanzamiento y calificación.
-- Agrega peliculas a lista de favoritos y accede a su información sin conexión a internet.
-- Lee comentarios de los usuarios y visualiza trailers.
+- Find information about movies such as release date, rating, movie poster, vote average, and plot synopsis.
+- Save your favorite movies and access to their information offline.
+- Find user reviews and movie trailers.
 
-# Uso de la app:
+# Before using this app:
 
-- Esta aplicación usa la API de [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction), por tanto es indispensable  ingresar una API key para su uso.
+- This app uses [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction) API. In order to use it, you must enter your API key.
 
 # Screenshots
 
