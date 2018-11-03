@@ -23,48 +23,68 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="PopularMovies_2" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="DetailFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/popularmovies/ui/DetailFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="231" column="0" lean-forward="true" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
+            <state relative-caret-position="386">
+              <caret line="617" column="38" lean-forward="false" selection-start-line="617" selection-start-column="38" selection-end-line="617" selection-end-column="38" />
               <folding>
                 <element signature="method#requestPermissions#0;class#DetailFragment#0" expanded="false" />
-                <element signature="e#6969#6989#0" expanded="true" />
-                <element signature="e#9415#9868#0" expanded="true" />
-                <element signature="e#9867#9868#0" expanded="true" />
-                <element signature="e#10312#10655#0" expanded="true" />
-                <element signature="e#10654#10655#0" expanded="true" />
+                <element signature="e#7020#7040#0" expanded="true" />
+                <element signature="e#9466#9919#0" expanded="true" />
+                <element signature="e#9918#9919#0" expanded="true" />
                 <element signature="method#isOnline#0;class#DetailFragment#0" expanded="false" />
-                <element signature="e#12924#12965#0" expanded="true" />
-                <element signature="e#13338#13999#0" expanded="true" />
-                <element signature="e#13640#13955#0" expanded="true" />
-                <element signature="e#13829#13878#0" expanded="true" />
-                <element signature="e#13954#13955#0" expanded="true" />
-                <element signature="e#13998#13999#0" expanded="true" />
-                <element signature="e#14415#14456#0" expanded="true" />
-                <element signature="e#15190#16283#0" expanded="true" />
-                <element signature="e#15459#16055#0" expanded="true" />
-                <element signature="e#15703#15751#0" expanded="true" />
-                <element signature="e#15908#15960#0" expanded="true" />
-                <element signature="e#16054#16055#0" expanded="true" />
-                <element signature="e#16282#16283#0" expanded="true" />
+                <element signature="e#12214#12255#0" expanded="true" />
+                <element signature="e#12628#13289#0" expanded="true" />
+                <element signature="e#12930#13245#0" expanded="true" />
+                <element signature="e#13119#13168#0" expanded="true" />
+                <element signature="e#13244#13245#0" expanded="true" />
+                <element signature="e#13288#13289#0" expanded="true" />
+                <element signature="e#13705#13746#0" expanded="true" />
+                <element signature="e#14480#15573#0" expanded="true" />
+                <element signature="e#14749#15345#0" expanded="true" />
+                <element signature="e#14993#15041#0" expanded="true" />
+                <element signature="e#15198#15250#0" expanded="true" />
+                <element signature="e#15344#15345#0" expanded="true" />
+                <element signature="e#15572#15573#0" expanded="true" />
                 <element signature="method#downloadFile#0;class#DetailFragment#0" expanded="false" />
                 <element signature="method#createImageFile#0;class#DetailFragment#0" expanded="false" />
                 <element signature="method#getAlbumDir#0;class#DetailFragment#0" expanded="false" />
-                <element signature="e#17693#17721#0" expanded="true" />
-                <element signature="e#18102#18130#0" expanded="true" />
+                <element signature="e#16983#17011#0" expanded="true" />
+                <element signature="e#17392#17420#0" expanded="true" />
                 <element signature="method#getBitmapFromUri#0;class#DetailFragment#0" expanded="false" />
                 <element signature="method#loadDetailsViews#0;class#DetailFragment#0" expanded="false" />
-                <element signature="e#20374#20402#0" expanded="true" />
-                <element signature="e#20901#20928#0" expanded="true" />
-                <element signature="e#21127#21156#0" expanded="true" />
-                <element signature="e#23264#23283#0" expanded="true" />
-                <element signature="e#23530#23550#0" expanded="true" />
-                <element signature="e#25543#25809#0" expanded="true" />
-                <element signature="e#25808#25809#0" expanded="true" />
+                <element signature="e#19664#19692#0" expanded="true" />
+                <element signature="e#20191#20218#0" expanded="true" />
+                <element signature="e#20417#20446#0" expanded="true" />
+                <element signature="e#22554#22573#0" expanded="true" />
+                <element signature="e#22820#22840#0" expanded="true" />
+                <element signature="e#24804#25330#0" expanded="true" />
+                <element signature="e#25329#25330#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/popularmovies/ui/MainFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="56" column="4" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="26" />
+              <folding>
+                <element signature="e#3885#3938#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2173,14 +2193,14 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1296" />
     <option name="height" value="1000" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="AndroidView" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -2193,34 +2213,13 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="PopularMovies_2" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="PopularMovies_2" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="sync.plugin.last.upgrade.timestamp" value="1541020015276" />
+    <property name="sync.plugin.last.upgrade.timestamp" value="1541202194039" />
     <property name="device.picker.selection" value="f61cdc86" />
     <property name="android.profiler.active" value="true" />
   </component>
@@ -2404,39 +2403,39 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="7" />
     <editor active="true" />
     <layout>
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2444,16 +2443,56 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/popularmovies/ui/DetailFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#requestPermissions#0;class#DetailFragment#0" expanded="false" />
+            <element signature="e#7020#7040#0" expanded="true" />
+            <element signature="e#9466#9919#0" expanded="true" />
+            <element signature="e#9918#9919#0" expanded="true" />
+            <element signature="method#isOnline#0;class#DetailFragment#0" expanded="false" />
+            <element signature="e#12214#12255#0" expanded="true" />
+            <element signature="e#12628#13289#0" expanded="true" />
+            <element signature="e#12930#13245#0" expanded="true" />
+            <element signature="e#13119#13168#0" expanded="true" />
+            <element signature="e#13244#13245#0" expanded="true" />
+            <element signature="e#13288#13289#0" expanded="true" />
+            <element signature="e#13705#13746#0" expanded="true" />
+            <element signature="e#14480#15573#0" expanded="true" />
+            <element signature="e#14749#15345#0" expanded="true" />
+            <element signature="e#14993#15041#0" expanded="true" />
+            <element signature="e#15198#15250#0" expanded="true" />
+            <element signature="e#15344#15345#0" expanded="true" />
+            <element signature="e#15572#15573#0" expanded="true" />
+            <element signature="method#downloadFile#0;class#DetailFragment#0" expanded="false" />
+            <element signature="method#createImageFile#0;class#DetailFragment#0" expanded="false" />
+            <element signature="method#getAlbumDir#0;class#DetailFragment#0" expanded="false" />
+            <element signature="e#16983#17011#0" expanded="true" />
+            <element signature="e#17392#17420#0" expanded="true" />
+            <element signature="method#getBitmapFromUri#0;class#DetailFragment#0" expanded="false" />
+            <element signature="method#loadDetailsViews#0;class#DetailFragment#0" expanded="false" />
+            <element signature="e#19664#19692#0" expanded="true" />
+            <element signature="e#20191#20218#0" expanded="true" />
+            <element signature="e#20417#20446#0" expanded="true" />
+            <element signature="e#22554#22573#0" expanded="true" />
+            <element signature="e#22820#22840#0" expanded="true" />
+            <element signature="e#24804#25330#0" expanded="true" />
+            <element signature="e#25329#25330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-27/android.jar!/java/lang/Runnable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2477,7 +2516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="267" column="0" lean-forward="false" selection-start-line="267" selection-start-column="0" selection-end-line="267" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2485,19 +2523,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_movie_detail.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1530">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-fragment/27.1.1/94732bda44fba11302c58e459b7c1f47e7521bf9/support-fragment-27.1.1-sources.jar!/android/support/v4/app/FragmentManager.java">
@@ -2512,7 +2549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2520,7 +2556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2544,7 +2579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2577,51 +2611,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/popularmovies/ui/MainFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="98" column="20" lean-forward="false" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="264">
+          <caret line="56" column="4" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="26" />
+          <folding>
+            <element signature="e#3885#3938#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/popularmovies/ui/DetailFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="231" column="0" lean-forward="true" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
+        <state relative-caret-position="386">
+          <caret line="617" column="38" lean-forward="false" selection-start-line="617" selection-start-column="38" selection-end-line="617" selection-end-column="38" />
           <folding>
             <element signature="method#requestPermissions#0;class#DetailFragment#0" expanded="false" />
-            <element signature="e#6969#6989#0" expanded="true" />
-            <element signature="e#9415#9868#0" expanded="true" />
-            <element signature="e#9867#9868#0" expanded="true" />
-            <element signature="e#10312#10655#0" expanded="true" />
-            <element signature="e#10654#10655#0" expanded="true" />
+            <element signature="e#7020#7040#0" expanded="true" />
+            <element signature="e#9466#9919#0" expanded="true" />
+            <element signature="e#9918#9919#0" expanded="true" />
             <element signature="method#isOnline#0;class#DetailFragment#0" expanded="false" />
-            <element signature="e#12924#12965#0" expanded="true" />
-            <element signature="e#13338#13999#0" expanded="true" />
-            <element signature="e#13640#13955#0" expanded="true" />
-            <element signature="e#13829#13878#0" expanded="true" />
-            <element signature="e#13954#13955#0" expanded="true" />
-            <element signature="e#13998#13999#0" expanded="true" />
-            <element signature="e#14415#14456#0" expanded="true" />
-            <element signature="e#15190#16283#0" expanded="true" />
-            <element signature="e#15459#16055#0" expanded="true" />
-            <element signature="e#15703#15751#0" expanded="true" />
-            <element signature="e#15908#15960#0" expanded="true" />
-            <element signature="e#16054#16055#0" expanded="true" />
-            <element signature="e#16282#16283#0" expanded="true" />
+            <element signature="e#12214#12255#0" expanded="true" />
+            <element signature="e#12628#13289#0" expanded="true" />
+            <element signature="e#12930#13245#0" expanded="true" />
+            <element signature="e#13119#13168#0" expanded="true" />
+            <element signature="e#13244#13245#0" expanded="true" />
+            <element signature="e#13288#13289#0" expanded="true" />
+            <element signature="e#13705#13746#0" expanded="true" />
+            <element signature="e#14480#15573#0" expanded="true" />
+            <element signature="e#14749#15345#0" expanded="true" />
+            <element signature="e#14993#15041#0" expanded="true" />
+            <element signature="e#15198#15250#0" expanded="true" />
+            <element signature="e#15344#15345#0" expanded="true" />
+            <element signature="e#15572#15573#0" expanded="true" />
             <element signature="method#downloadFile#0;class#DetailFragment#0" expanded="false" />
             <element signature="method#createImageFile#0;class#DetailFragment#0" expanded="false" />
             <element signature="method#getAlbumDir#0;class#DetailFragment#0" expanded="false" />
-            <element signature="e#17693#17721#0" expanded="true" />
-            <element signature="e#18102#18130#0" expanded="true" />
+            <element signature="e#16983#17011#0" expanded="true" />
+            <element signature="e#17392#17420#0" expanded="true" />
             <element signature="method#getBitmapFromUri#0;class#DetailFragment#0" expanded="false" />
             <element signature="method#loadDetailsViews#0;class#DetailFragment#0" expanded="false" />
-            <element signature="e#20374#20402#0" expanded="true" />
-            <element signature="e#20901#20928#0" expanded="true" />
-            <element signature="e#21127#21156#0" expanded="true" />
-            <element signature="e#23264#23283#0" expanded="true" />
-            <element signature="e#23530#23550#0" expanded="true" />
-            <element signature="e#25543#25809#0" expanded="true" />
-            <element signature="e#25808#25809#0" expanded="true" />
+            <element signature="e#19664#19692#0" expanded="true" />
+            <element signature="e#20191#20218#0" expanded="true" />
+            <element signature="e#20417#20446#0" expanded="true" />
+            <element signature="e#22554#22573#0" expanded="true" />
+            <element signature="e#22820#22840#0" expanded="true" />
+            <element signature="e#24804#25330#0" expanded="true" />
+            <element signature="e#25329#25330#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -122,7 +122,8 @@ public class DetailFragment extends Fragment implements
         }
 
         if (movieId != 0) {
-            setupDetailViewModel();
+            isSortedByFavoriteMovie = true;
+            checkMovieInDatabase(movieId);
         }
 
         requestPermissions();
@@ -207,7 +208,7 @@ public class DetailFragment extends Fragment implements
             loaderManager.initLoader(IMAGE_LOADER_ID, null, this);
             mBinding.emptyDetails.setVisibility(View.GONE);
             mBinding.fragmentMovieLayout.setVisibility(View.VISIBLE);
-            isFavoriteMovieCheck(myMovie.getId());
+            checkMovieInDatabase(myMovie.getId());
         }
 
         //Enable HomeAsUpEnable only if we're not on a tablet.
@@ -231,24 +232,6 @@ public class DetailFragment extends Fragment implements
         });
 
         return rootView;
-    }
-
-    private void isFavoriteMovieCheck (final int movieId) {
-        DetailMovieViewModelFactory detailMovieViewModelFactory =
-                new DetailMovieViewModelFactory(mDb, movieId);
-        final DetailMovieViewModel detailMovieViewModel =
-                ViewModelProviders.of(this, detailMovieViewModelFactory).get(DetailMovieViewModel.class);
-
-        detailMovieViewModel.getMovie().observe(this, new Observer<Movie>() {
-            @Override
-            public void onChanged(@Nullable Movie movie) {
-              detailMovieViewModel.getMovie().removeObserver(this);
-                movieOnDb = movie;
-                if(movie != null){
-                    mBinding.favoriteBtn.setChecked(true);
-                }
-            }
-        });
     }
 
     public boolean isOnline() {
@@ -629,19 +612,25 @@ public class DetailFragment extends Fragment implements
         outState.putInt(SAVED_ID_KEY, movieId);
     }
 
-    private void setupDetailViewModel() {
-        isSortedByFavoriteMovie = true;
-
+    private void checkMovieInDatabase(int movieId) {
         DetailMovieViewModelFactory detailMovieViewModelFactory =
                 new DetailMovieViewModelFactory(mDb, movieId);
         final DetailMovieViewModel detailMovieViewModel =
                 ViewModelProviders.of(this, detailMovieViewModelFactory).get(DetailMovieViewModel.class);
+
         detailMovieViewModel.getMovie().observe(this, new Observer<Movie>() {
             @Override
             public void onChanged(@Nullable Movie movie) {
                 detailMovieViewModel.getMovie().removeObserver(this);
-                myMovie = movie;
-                populateUI(movie);
+                if (isSortedByFavoriteMovie){
+                    myMovie = movie;
+                    populateUI(movie);
+                } else {
+                    movieOnDb = movie;
+                    if(movie != null){
+                        mBinding.favoriteBtn.setChecked(true);
+                    }
+                }
             }
         });
     }
