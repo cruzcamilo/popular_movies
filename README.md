@@ -14,7 +14,7 @@ Discover movies sorted by most popular or highest rated and create your own libr
 
 # Screenshots
 
-![](PopularMovies_2/screenshoots/1.png)
-![](PopularMovies_2/screenshoots/2.png)
-![](PopularMovies_2/screenshoots/3.png)
-![](PopularMovies_2/screenshoots/4.png)
+<img src="https://raw.githubusercontent.com/cruzcamilo/popular_movies/master/PopularMovies_2/screenshoots/1.png" width="480" height="857">
+<img src="https://raw.githubusercontent.com/cruzcamilo/popular_movies/master/PopularMovies_2/screenshoots/2.png" width="480" height="857">
+<img src="https://raw.githubusercontent.com/cruzcamilo/popular_movies/master/PopularMovies_2/screenshoots/3.png" width="694" height="934">
+<img src="https://raw.githubusercontent.com/cruzcamilo/popular_movies/master/PopularMovies_2/screenshoots/4.png" >
