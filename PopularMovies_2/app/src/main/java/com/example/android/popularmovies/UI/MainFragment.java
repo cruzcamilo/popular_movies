@@ -28,9 +28,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.android.popularmovies.BuildConfig;
-import com.example.android.popularmovies.loader.MovieLoader;
-import com.example.android.popularmovies.adapter.MovieRecyclerAdapter;
 import com.example.android.popularmovies.R;
+import com.example.android.popularmovies.adapter.MovieRecyclerAdapter;
+import com.example.android.popularmovies.loader.MovieLoader;
 import com.example.android.popularmovies.model.Movie;
 import com.example.android.popularmovies.viewmodels.MainViewModel;
 
@@ -79,11 +79,14 @@ public class MainFragment extends Fragment implements
         int mNoOfColumns;
 
         RecyclerView recyclerView = rootView.findViewById(R.id.rv_movies);
-        if (!isTablet || currentOrientation == Configuration.ORIENTATION_LANDSCAPE){
+        if (!isTablet){
             mNoOfColumns = 2;
-        } else {
+        } else if(currentOrientation == Configuration.ORIENTATION_PORTRAIT) {
             mNoOfColumns = 1;
+        } else {
+            mNoOfColumns = 3;
         }
+
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), mNoOfColumns);
         recyclerView.setLayoutManager(gridLayoutManager);
         mAdapter = new MovieRecyclerAdapter(getActivity(), new ArrayList<Movie>(), this);
@@ -105,7 +108,6 @@ public class MainFragment extends Fragment implements
                     mAdapter.setData(savedMovies);
                 }
             } else {
-
                 if (isOnline()) {
                     LoaderManager loaderManager = getActivity().getLoaderManager();
                     loaderManager.initLoader(MOVIE_LOADER_ID, null, this);
