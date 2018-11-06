@@ -63,17 +63,16 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdap
         if (currentMovie.getCoverImageUri() == null) {
             Picasso.with(context)
                     .load(currentMovie.getPosterThumbnail())
-                    .resize(540, 810)
+                    .resize(540, 840)
                     .error(R.drawable.noimageicon)
                     .into(holder.moviePoster);
         } else {
             Picasso.with(context)
                     .load(currentMovie.getPosterImageUri())
-                    .resize(540, 810)
+                    .resize(540, 840)
                     .error(R.drawable.noimageicon)
                     .into(holder.moviePoster);
         }
-
     }
 
     @Override
