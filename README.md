@@ -7,6 +7,7 @@ Discover movies sorted by most popular or highest rated and create your own libr
 - Find information about movies such as release date, rating, movie poster, vote average, and plot synopsis.
 - Save your favorite movies and access to their information offline.
 - Find user reviews and movie trailers.
+- This app uses [Android Architecture Components](https://developer.android.com/topic/libraries/architecture/): Room, LiveData and ViewModel.
 
 # Before using this app:
 
