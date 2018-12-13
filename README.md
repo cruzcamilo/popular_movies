@@ -1,6 +1,6 @@
 # Popular Movies
 
-Discover movies sorted by most popular or highest rated and create your own library of favorite movies.
+This app uses [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction) API to display information about movies, sorted by most popular or highest rated.
 
 # Features:
 
@@ -11,7 +11,7 @@ Discover movies sorted by most popular or highest rated and create your own libr
 
 # Before using this app:
 
-- This app uses [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction) API. In order to use it, you must enter your API key.
+- In order to run the app you must enter your API key. You can request one at [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction) website.
 
 # Screenshots
 
